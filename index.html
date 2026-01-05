@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ROLLEX KEBAB Kobylin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="main-header">
+  <div class="nav-container">
+    <a href="index.html" class="logo-area">
+      <img src="images/logo.png" class="logo-img" alt="ROLLEX KEBAB logo">
+      <div class="logo-text">
+        <h1>ROLLEX KEBAB</h1>
+        <p>Kobylin • Mikołaja Kopernika 2A</p>
+      </div>
+    </a>
+
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html" class="active">Strona główna</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="lokalizacja.html">Lokalizacja</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero fade-in">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h2>Najlepszy kebab w okolicy. Zapraszamy!</h2>
+    <p>Świeże składniki, soczyste mięso i smak, który zapamiętasz.</p>
+
+    <div class="btn-row">
+      <a href="menu.html" class="btn-primary">Zobacz menu</a>
+      <a href="kontakt.html" class="btn-secondary">Kontakt</a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features fade-in">
+  <div class="feature">
+    <span>🔥</span>
+    <h3>Świeże składniki</h3>
+    <p>Codziennie przygotowywane świeże warzywa i mięso najwyższej jakości.</p>
+  </div>
+
+  <div class="feature">
+    <span>⭐</span>
+    <h3>Najlepszy smak</h3>
+    <p> Składniki najwyżej jakości — smak, który pokochasz.</p>
+  </div>
+
+  <div class="feature">
+    <span>⚡</span>
+    <h3>Szybka obsługa</h3>
+    <p>Twoje zamówienie zrealizujemy błyskawicznie.</p>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section class="gallery-grid fade-in">
+  <div class="gallery-item">
+    <img src="images/kebab1.png" alt="">
+  </div>
+  <div class="gallery-item">
+    <img src="images/kebab2.png" alt="">
+  </div>
+  <div class="gallery-item">
+    <img src="images/kebab3.png" alt="">
+  </div>
+</section>
+
+</main>
+
+<footer class="fade-in">
+  <p>© <span id="year"></span> ROLLEX KEBAB Kobylin</p>
+</footer>
+
+<!-- SKRYPT -->
+<script>
+  // Rok w stopce
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Aktywacja animacji fade-in
+  document.querySelectorAll(".fade-in").forEach(el => {
+    el.classList.add("visible");
+  });
+</script>
+
+</body>
+</html>

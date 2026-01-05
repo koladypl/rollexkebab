@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt – ROLLEX KEBAB Kobylin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="main-header">
+  <div class="nav-container">
+    <a href="index.html" class="logo-area">
+      <img src="images/logo.png" class="logo-img">
+      <div class="logo-text">
+        <h1>ROLLEX KEBAB</h1>
+        <p>Kobylin • Mikołaja Kopernika 2A</p>
+      </div>
+    </a>
+
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html">Strona główna</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="kontakt.html" class="active">Kontakt</a></li>
+        <li><a href="lokalizacja.html">Lokalizacja</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero fade-in">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h2>Kontakt</h2>
+    <p>Masz pytania? Jesteśmy do Twojej dyspozycji!</p>
+  </div>
+</section>
+
+<section class="qr-section fade-in">
+  <div class="qr-tile">
+    <h2>📞 Telefon</h2>
+    <p>+48 600 000 000</p>
+
+    <h2>📧 Email</h2>
+    <p>kontakt@rollexkebab.pl</p>
+
+    <h2>📍 Adres</h2>
+    <p>Mikołaja Kopernika 7<br>63-740 Kobylin</p>
+
+    <h2>⏰ Godziny otwarcia</h2>
+    <p>Pon–Sob: 10:00 – 22:00<br>Niedziela: 12:00 – 21:00</p>
+
+    <h2>📱 Social Media</h2>
+    <p>Facebook • Instagram</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="fade-in">
+  <p>© <span id="year"></span> ROLLEX KEBAB Kobylin</p>
+</footer>
+
+<script> document.getElementById("year").textContent = new Date().getFullYear(); </script> <script> document.addEventListener("DOMContentLoaded", () => { document.querySelectorAll(".fade-in").forEach(el => { el.classList.add("visible"); }); }); </script>
+
+</body>
+</html>

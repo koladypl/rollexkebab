@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu – ROLLEX KEBAB Kobylin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="main-header">
+  <div class="nav-container">
+    <a href="index.html" class="logo-area">
+      <img src="images/logo.png" class="logo-img" alt="ROLLEX KEBAB logo">
+      <div class="logo-text">
+        <h1>ROLLEX KEBAB</h1>
+        <p>Kobylin • Mikołaja Kopernika 2A</p>
+      </div>
+    </a>
+
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html">Strona główna</a></li>
+        <li><a href="menu.html" class="active">Menu</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="lokalizacja.html">Lokalizacja</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero fade-in">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h2>Nasze Menu</h2>
+    <p>Świeżo, konkretnie i zawsze na pełnym ogniu 🔥</p>
+  </div>
+</section>
+
+<section class="menu-section fade-in">
+  <h2>Wybierz kategorię</h2>
+  <p class="menu-sub">Przeglądaj nasze dania według rodzaju</p>
+
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">Wszystko</button>
+    <button class="filter-btn" data-filter="pita">Pity</button>
+    <button class="filter-btn" data-filter="bulka">Bułki</button>
+    <button class="filter-btn" data-filter="box">Boxy</button>
+    <button class="filter-btn" data-filter="talerz">Talerze</button>
+    <button class="filter-btn" data-filter="inne">Inne</button>
+  </div>
+
+  <div class="menu-grid">
+
+    <div class="menu-item pita">
+      <img src="images/kebab-w-picie.png" class="menu-img">
+      <h3>Kebab w picie</h3>
+      <p>Mięso, warzywa, sos.</p>
+      <span class="price">22 zł</span>
+    </div>
+
+    <div class="menu-item bulka">
+      <img src="images/kebab-w-bulce.png" class="menu-img">
+      <h3>Kebab w bułce</h3>
+      <p>Chrupiąca bułka, świeże dodatki.</p>
+      <span class="price">24 zł</span>
+    </div>
+
+    <div class="menu-item box">
+      <img src="images/kebab-box.png" class="menu-img">
+      <h3>Kebab Box</h3>
+      <p>Mięso + frytki</p>
+      <span class="price">26 zł</span>
+    </div>
+
+    <div class="menu-item talerz">
+      <img src="images/talerz-kebab.png" class="menu-img">
+      <h3>Talerz kebab</h3>
+      <p>Mięso, frytki/ryż, sałatka.</p>
+      <span class="price">32 zł</span>
+    </div>
+
+    <div class="menu-item inne">
+      <img src="images/frytki.jpg" class="menu-img">
+      <h3>Frytki</h3>
+      <p>Porcja klasycznych frytek.</p>
+      <span class="price">9 zł</span>
+    </div>
+
+  
+  </div>
+</section>
+
+<section class="tables-row fade-in">
+
+  <div class="table-box">
+    <h2>Sosy</h2>
+    <table class="price-table">
+      <tr><th>Sos</th><th>Cena</th></tr>
+      <tr><td>Czosnkowy</td><td>2 zł</td></tr>
+      <tr><td>Ostry</td><td>2 zł</td></tr>
+      <tr><td>Mieszany</td><td>2 zł</td></tr>
+    </table>
+  </div>
+
+  <div class="table-box">
+    <h2>Napoje</h2>
+    <table class="price-table">
+      <tr><th>Napój</th><th>Cena</th></tr>
+      <tr><td>Cola / Pepsi</td><td>6 zł</td></tr>
+      <tr><td>Woda</td><td>4 zł</td></tr>
+      <tr><td>Sok</td><td>5 zł</td></tr>
+    </table>
+  </div>
+
+</section>
+
+</main>
+
+<footer class="fade-in">
+  <p>© <span id="year"></span> ROLLEX KEBAB Kobylin</p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const items = document.querySelectorAll(".menu-item");
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelector(".filter-btn.active").classList.remove("active");
+      btn.classList.add("active");
+
+      const filter = btn.dataset.filter;
+
+      items.forEach(item => {
+        item.style.display =
+          filter === "all" || item.classList.contains(filter)
+            ? "flex"
+            : "none";
+      });
+    });
+  });
+
+  // AKTYWACJA ANIMACJI
+  document.querySelectorAll(".fade-in").forEach(el => {
+    el.classList.add("visible");
+  });
+</script>
+
+
+</body>
+</html>
